@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script   src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+	<script src="index.js" type="text/javascript"></script>
+	<script src="slideshow_sample.js" type="text/javascript"></script>
+	<style type="text/css">
+		body{
+			font-size:62.5%;
+			background-color: #E9EEEA;
+		}
+		@font-face{
+			font-family: "cc";
+			src:url("calibremedium.woff");
+		}
+			@font-face{
+			font-family: "bb";
+			src:url("calibreregular.woff");
+		}
+		.title{
+			font-size: 5rem;
+			position: absolute;
+			left: 8%;
+			top: 0%;
+			font-family: cc;
+			letter-spacing: -0.03rem;
+			z-index: 1;
+			
+			width: 90%;
+			/*color:#E83015;*/
+			/*color:#A8D8B9;*/
+			color:black;
+
+		}
+/*		#line{
+			width: 52rem;
+			height: 0.1rem;
+			background: black;
+			position: absolute;
+			bottom: 8%;
+			left: 0.2%;
+		}*/
+		#resume{
+			text-align: left;
+			font-family: cc;
+			font-size: 1.5rem;
+			right: 8%;
+			position: absolute;
+			bottom: 8%;
+			color: #00AA90;
+			/*text-decoration: none;*/
+		}
+		.work_box{
+			position: absolute;
+			left: 0%;
+			top: 7%;
+			background-color: transparent;
+			width: 91%;
+			height: 260%;
+			padding: 5rem 1rem 1rem 4rem;
+			display: grid;
+			grid-template-columns:repeat(2, 1fr) ;
+			grid-template-rows:repeat(4, 1fr) ;
+			grid-gap: 30px;
+			transform: scale(0.9,0.9);
+		}
+		.work_1{
+			background-image: url("img_6010b.png");
+			/*background-color: #E6E9E9;*/
+
+			 background-size: 350px 500px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+
+			display: grid;
+			grid-column: 1;
+    		grid-row: 1; 
+    		
+    		/*border: 0.08rem solid;*/
+		}
+	.work_1:hover::before {
+			background-color:  #A8D8B9;
+			background-image: url("img_6010.png");
+			background-size: 350px 500px;
+			background-repeat: no-repeat;
+			  background-position: center; 
+
+
+			transition: ease-in-out 2s;
+			content: "Wiki Book: Chinese Herbology"; 
+			font-family: cc;
+			font-size: 2rem;
+			/*color: rgb(105,105,105);*/
+			color:#E9EEEA;
+			text-align: left;
+			padding: 2rem 2rem 2rem 2rem;
+		}
+		.work_2{
+			background-image: url("jp_2b.png");
+			 background-size: 990px 650px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+
+			display: grid;
+			grid-column: 2;
+    		grid-row: 1; 
+    		/*border: 0.08rem solid;*/
+
+		}
+		.work_2:hover::before {
+			/*background-color: rgb(235, 73, 70,0.5);*/
+			background-image: url("jp_2.png");
+			 background-size: 990px 650px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+
+			transition: ease-in-out 2s;
+			content: "Weather and National Flag"; 
+			font-family: cc;
+			font-size: 2rem;
+			/*color: rgb(105,105,105);*/
+			color:#00AA90;
+			text-align: left;
+			padding: 2rem 2rem 2rem 2rem;
+		}
+				.work_3{
+			background-image: url("js_playb.png");
+			 background-size: 950px 580px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+
+			display: grid;
+			grid-column: 1;
+    		grid-row: 3; 
+    		/*border: 0.08rem solid;*/
+
+		}
+			.work_3:hover::before {
+			/*background-color: rgb(235, 73, 70,0.5);*/
+			background-image: url("js_play.png");
+			 background-size: 950px 580px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+
+			transition: ease-in-out 2s;
+			content: "Screen Toy Playground"; 
+			font-family: cc;
+			font-size: 2rem;
+			/*color: rgb(105,105,105);*/
+			color:#00AA90;
+			text-align: left;
+			padding: 2rem 2rem 2rem 2rem;
+		}
+			.work_4{
+			background-image: url("img_6012b.png");
+			/*background-color: #CFC8C8;*/
+			 background-size: 650px 500px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+			  /*background-color:  #E6E9E9;
+*/
+			display: grid;
+			grid-column: 2;
+    		grid-row: 2; 
+    		/*border: 0.08rem solid;*/
+		}
+			.work_4:hover::before {
+			/*background-color: rgb(235, 73, 70,0.5);*/
+			background-image: url("img_6012.png");
+			background-color:  #A8D8B9;
+			 background-size: 650px 500px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+
+			transition: ease-in-out 2s;
+			content: "New York Design"; 
+			font-family: cc;
+			font-size: 2rem;
+			/*color: rgb(105,105,105);*/
+			color:#E9EEEA;
+			text-align: left;
+			padding: 2rem 2rem 2rem 2rem;
+		}
+			.work_5{
+			background-image: url("susan_kare_magazineb.png");
+			 background-size: 680px 400px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+/*background-color:  #E6E9E9;*/
+
+			display: grid;
+			grid-column: 1;
+    		grid-row: 4; 		
+		}
+			.work_5:hover::before {
+			/*background-color: rgb(235, 73, 70,0.5);*/
+			background-image: url("susan_kare_magazine.jpg");
+			 background-size: 680px 400px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+/*background-color:  #E6E9E9;*/
+
+			transition: ease-in-out 2s;
+			content: "Susan Kare Report"; 
+			font-family: cc;
+			font-size: 2rem;
+			/*color: rgb(105,105,105);*/
+			color:#00AA90;
+			text-align: left;
+			padding: 2rem 2rem 2rem 2rem;
+		}
+
+
+			.work_6{
+			background-image: url("mag_picture/brand guidline_3b.jpg");
+			 background-size: 637.5px 825px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+
+
+			display: grid;
+			grid-column: 2;
+    		grid-row: 3; 		
+		}
+			.work_6:hover::before {
+			/*background-color: rgb(235, 73, 70,0.5);*/
+			background-image: url("mag_picture/brand guidline_3.jpg");
+			 background-size: 637.5px 825px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+
+
+			transition: ease-in-out 2s;
+			content: "MAG Logo System"; 
+			font-family: cc;
+			font-size: 2rem;
+			/*color: rgb(105,105,105);*/
+			color:#00AA90;
+			text-align: left;
+			padding: 2rem 2rem 2rem 2rem;
+		}
+
+
+			.work_7{
+			background-image: url("emoji_soundb.png");
+			 background-size: 710px 408.5px;
+			  background-repeat: no-repeat;
+			  background-position: center; 
+
+
+			display: grid;
+			grid-column: 1;
+    		grid-row: 2; 		
+		}
+			.work_7:hover::before {
+			/*background-color: rgb(235, 73, 70,0.5);*/
+			background-image: url("emoji_sound.png");
+			 background-size: 710px 408.5px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+
+
+			transition: ease-in-out 2s;
+			content: "Emoji and Sound"; 
+			font-family: cc;
+			font-size: 2rem;
+			/*color: rgb(105,105,105);*/
+			color:#00AA90;
+			text-align: left;
+			padding: 2rem 2rem 2rem 2rem;
+		}
+
+		#transparent_back{
+			width: 110%;
+			height: 110%;
+			left: -2%;
+			top: -2%;
+			background-color: rgba(105,105,105,0.5);
+			z-index: 20;
+			display: none;
+			position: fixed;
+		}
+		#image:hover{
+			transform: scale(1.7,1.7);
+			z-index: 1000;
+			cursor: zoom-in;
+		}
+		.fix{
+			position: fixed;
+		}
+
+
+.next6,.prev6,.next4,.prev4,.work_1,.work_2,.work_3,.work_4,.work_5,.work_6,.work_7,#close,#back,#close_2,#back_2,#close_3,#back_3,#close_4,#back_4,#close_5,#back_5,#close_6,#back_6,#back_7{
+	cursor: pointer;
+}
+
+
+
+/*		#close,#close_2,#close_3,#close_4,#close_5,#close_6{
+			background-color: black;
+			width: 1.3rem;
+			height: 1.3rem;
+			transform: rotate(45deg);
+			right: 0px;
+			margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+			position: absolute;
+			border-radius: 10%;
+			
+		}
+		#close:hover{
+			background-color: rgb(105,105,105);
+			transition: ease-in-out 0.5s;
+		}
+		#close_2:hover{
+			background-color: rgb(105,105,105);
+			transition: ease-in-out 0.5s;
+		}
+		#close_3:hover{
+			background-color: rgb(105,105,105);
+			transition: ease-in-out 0.5s;
+		}
+		#close_4:hover{
+			background-color: rgb(105,105,105);
+			transition: ease-in-out 0.5s;
+		}
+		#close_5:hover{
+			background-color: rgb(105,105,105);
+			transition: ease-in-out 0.5s;
+		}
+		#close_6:hover{
+			background-color: rgb(105,105,105);
+			transition: ease-in-out 0.5s;
+		}*/
+
+
+		.work_detail1,.work_detail2,.work_detail3,.work_detail4,.work_detail5,.work_detail6,.work_detail7{
+
+			background-color:  #E9EEEA;
+			position: absolute;
+			z-index: 100;
+			border-radius: 0.2%;
+			display: none;
+
+			overflow: auto;
+			height: calc(100vh);
+			width: 70rem;
+			left: 11%;
+			top: 0%;
+		}
+/*		.work_detail2{
+	
+			background-color:  #E9EEEA;
+			position: absolute;
+			left: 11%;
+			top: 0%;
+			z-index: 100;
+			border-radius: 0.2%;
+			display: none;
+		}
+		.work_detail3{
+
+			background-color:  #E9EEEA;
+			position: absolute;
+			left: 11%;
+			top: 0%;
+			z-index: 100;
+			border-radius: 0.2%;
+			display: none;
+		}
+		.work_detail4{
+
+			background-color:  #E9EEEA;
+			position: absolute;
+			left: 11%;
+			top: 15%;
+			z-index: 100;
+			border-radius: 0.2%;
+			display: none;
+		}
+		.work_detail5{
+
+			background-color:  #E9EEEA;
+			position: absolute;
+			left: 11%;
+			top: 0%;
+			z-index: 100;
+			border-radius: 0.2%;
+			display: none;
+		}
+		.work_detail6{
+
+			background-color:  #E9EEEA;
+			position: absolute;
+			left: 11%;
+			top: 15%;
+			z-index: 100;
+				border-radius: 0.2%;
+				display: none;
+
+			}
+					.work_detail7{
+
+			background-color:  #E9EEEA;
+			position: absolute;
+			left: 11%;
+			top: 15%;
+			z-index: 100;
+				border-radius: 0.2%;
+				display: none;
+*/
+			}
+			
+		.transition{
+			transition: background-color 3s ease-in-out;
+		}
+		#title_work_detail{
+			font-size: 5rem;
+			letter-spacing: -0.03rem;
+			font-family: cc;
+			padding: 1.5rem 2rem 0rem 1.5rem;
+		}
+		#intro{
+			font-family: "bb";
+			font-size: 1.2rem;
+			line-height: 2rem;
+			padding: 3rem 2rem 3rem 2rem;
+		}
+		#back,#back_2,#back_3,#back_4,#back_6,#back_5,#back_7{
+			font-family: "bb";
+			font-size: 2.8rem;
+			right: 4.5%;
+			top: 84%;
+			position: fixed;
+			transform: rotate(90deg);
+			z-index: -1;
+			padding: 0.4rem 0.7rem 0.7rem 0.7rem;
+			border-radius: 3%;
+color:#00AA90;
+			background-color: #E9EEEA;
+			text-decoration: underline;
+			font-weight: 900;
+			
+		
+		}
+
+
+
+
+
+.images1 {
+
+	overflow:hidden; 
+	white-space: nowrap; 
+	font-size:0;
+	position: absolute;
+	top: 75rem;
+
+}
+.images_inside1>* {width: 100%; display: inline-block; vertical-align:top;}
+.next1{
+  height:8rem;
+     width:4rem;
+     border-radius: 8rem 0 0 8rem;
+     background:#E6E9E9;
+     opacity: 90%;
+  position: absolute;
+  right: 0%;
+  top: 37%;
+  z-index: 10000;
+
+}
+
+.prev1{
+  height:8rem;
+     width:4rem;
+     border-radius: 0 8rem 8rem 0;
+     background:#E6E9E9;
+     opacity: 90%;
+  position: absolute;
+  left: 0%;
+  top: 37%;
+  z-index: 10000;
+}
+
+
+
+
+
+
+
+.images4 {
+
+	overflow:hidden; 
+	white-space: nowrap; 
+	font-size:0;
+	position: absolute;
+	top: 64rem;
+
+}
+.images_inside4>* {width: 100%; display: inline-block; vertical-align:top;}
+.next4{
+  height:8rem;
+     width:4rem;
+     border-radius: 8rem 0 0 8rem;
+     background:#E6E9E9;
+     opacity: 90%;
+  position: absolute;
+  right: 0%;
+  top: 37%;
+  z-index: 10000;
+
+}
+
+.prev4{
+  height:8rem;
+     width:4rem;
+     border-radius: 0 8rem 8rem 0;
+     background:#E6E9E9;
+     opacity: 90%;
+  position: absolute;
+  left: 0%;
+  top: 37%;
+  z-index: 10000;
+}
+
+
+
+
+
+
+.images6 {
+
+	overflow:hidden; 
+	white-space: nowrap; 
+	font-size:0;
+	position: absolute;
+	top: 113rem;
+
+}
+.images_inside6>* {width: 100%; display: inline-block; vertical-align:top;}
+.next6{
+  height:8rem;
+     width:4rem;
+     border-radius: 8rem 0 0 8rem;
+     background:#E6E9E9;
+     opacity: 90%;
+  position: absolute;
+  right: 0%;
+  top: 37%;
+  z-index: 10000;
+
+}
+
+.prev6{
+  height:8rem;
+     width:4rem;
+     border-radius: 0 8rem 8rem 0;
+     background:#E6E9E9;
+     opacity: 90%;
+  position: absolute;
+  left: 0%;
+  top: 37%;
+  z-index: 10000;
+}
+#arrow_p{
+	width: 0; 
+  height: 0; 
+  border-top: 0.85rem solid transparent;
+  border-bottom: 0.85rem solid transparent;
+  border-right: 0.85rem solid black;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+
+}
+#arrow_n{
+	width: 0; 
+  height: 0; 
+border-top: 0.85rem solid transparent;
+  border-bottom: 0.85rem solid transparent;
+  border-left: 0.85rem solid black;
+  position: absolute;
+  right: 20%;
+  top: 40%;
+
+}
+	</style>
+	<title>Irene's portfolio</title>
+</head>
+<body>
+
+	<div class="title">
+		<br/>
+		Hello, my name is <span style="color:#00AA90;">You Xu</span>
+		<div id="line"></div>
+		<a href="irene_you_xu_resume.pdf" target="_blank" id="resume">Reseume</a>
+		<!-- <div id="resume">Reseume</div> -->
+	</div>
+<div id="transparent_back"></div>
+	<div class="work_box">
+
+		<div class="work_1"></div>
+		<div class="work_2"></div>
+		<div class="work_3"></div>
+		<div class="work_4"></div>
+		<div class="work_5"></div>
+		<div class="work_6"></div>
+		<div class="work_7"></div>
+		
+	</div>
+
+
+
+
+	<div class="work_detail1">
+
+	<!-- 	<div id="close"></div> -->
+		<div id="title_work_detail">Chinese Herbology</div>
+		<br><br>
+	<img src="img_6010_desk.jpg" width=100%>
+	<div id="intro">
+		Since I grew up in China, I had many chances to get in touch with all the traditional Chinese culture. One of the most amazing culture is Chinese herbology. About how the Chinese herbology work cannot be explained in modern science. The whole medicial system of Chinese herbology was concluded from Chinese ancestors thousands years ago. Thus, when I choose 'Chinese Herbology' as the topic of my Wiki Book assignment, I think of the traditional Chinese layout, which is all the characters are laying in the vertical way. Because that is the way that those old Chinese herbological was written. However, since alphabets cannot be arranged vertically. It is also a test that how can English words and Chinese characters work in the vertical way. I want the book can be readable for everyone but also looks harmonic on the same page.  
+
+		<br><br>
+		After testing, I decied to make the English sentences still read in the horizontal way but rotate them 90 degrees so that makes the traditional Chinese layout and both alphabets look like they lay in the same way. The two different languages communicate each other somehow but cannot be read in the same way.  
+	</div>
+
+<!-- 	<img src="img_5998.png" width=50% id="image"><img src="img_5999.png" width=48% id="image">
+	<img src="img_6004.png" width=48% style="padding: 0rem 0rem 0rem 1rem" id="image"><img src="img_6009.png" width=50% id="image"> -->
+
+
+				<div class="images1">
+<div class="prev1"><div id="arrow_p"></div></div>
+<div class="next1"><div id="arrow_n"></div></div>
+        <div class="images_inside1">
+  <img src="herbology_book/hardcover_book_mockup2_3.png">
+        	<img src="herbology_book/hardcover_book_mockup4_5.png">
+            <img src="herbology_book/hardcover_book_mockup30_31.png">
+            <img src="herbology_book/hardcover_book_mockup40_41.png">
+            <img src="herbology_book/hardcover_book_mockup42_43.png">
+            <img src="herbology_book/hardcover_book_mockup49_48.png">  
+            <img src="herbology_book/hardcover_book_mockup60_61.png">  
+      
+        </div>
+</div>
+
+
+	<div id="back">Close<br>
+</div>
+</div>
+
+
+
+ 
+<div class="work_detail2">
+
+<!-- 		<div id="close_2"></div> -->
+		<div id="title_work_detail">Weather and National Flag</div>
+		<br><br>
+	
+	<div id="intro">
+		I have always been thinking how we can change a graphic elemnts that already existed into something else that can transit different information to the public. And I believe it is one of our graphic designers' mission.  
+		<br><br>
+		In this website, the graphic elements are moving based on the countries' weather alteration. The speed of the circle rotation represent the speed of wind. And the color of the circle represent the temperature. The hotter the wather is, the darker and deeper the circle's color is. The transparency of the long squares represent current cloudiness. And if current humidity is too high, there will be a shade of fog gradually cover the website. 
+		<br><br>
+		<a href="http://teaching.synopticoffice.com/course/f19_pucd_2035c/projects/xu/weather/JP/japan.html" target="_blank" style="color:#00AA90;font-weight: 900;">Go To The Website</a>
+	</div>
+
+	<img src="jp_1.png" width=50%><img src="jp_2.png" width=50%>
+	<img src="us_1.png" width=50%><img src="us_2.png" width=50%>
+		<div style="position: absolute; height: 100px; background-color:none; width: 100px; left: 25%; top: 145%;"></div>
+	<div id="back_2">Close<br>
+</div>
+</div>
+
+
+
+<div class="work_detail3">
+<!-- 
+		<div id="close_3"></div> -->
+		<div id="title_work_detail">Toy for Screen Playground</div>
+		<br><br>
+	
+	<div id="intro">
+		Just for Fun  
+		<br><br>
+		And that is interesting that Chinese chracters themselves can be a decorative structure and be applied to the web.  
+		<br><br>
+		<a href="http://teaching.synopticoffice.com/course/f19_pucd_2035c/projects/xu/week9/index.html" target="_blank" style="color:#00AA90;font-weight: 900;">Go To The Website</a>
+	</div>
+
+	<img src="js_play.png" width=100%>
+		<div style="position: absolute; height: 100px; background-color:none; width: 100px; left: 25%; top: 123%;"></div>
+	<div id="back_3">Close<br>
+</div>
+</div>
+
+
+<div class="work_detail4">
+
+	<!-- 	<div id="close_4"></div> -->
+		<div id="title_work_detail">New York Design</div>
+		<br><br>
+	<img src="img_6010.jpg" width=100%>
+	
+	<div id="intro">
+		What is good design? That is a good question. And many designers, including designers have debated that for serval centuries. For example, Massimo Vignelli, a graphic designer who used to design the sign for New York Subway, set up a standard to judge what is a good graphic design in this article <em>The Vignelli Canon</em>. And that why when I was assigned to redesigned his article, I decided to put it into the format of newspaper with many other different opinion about “What is good graphic design”.
+
+	
+	</div>
+
+
+
+			<div class="images4">
+<div class="prev4"><div id="arrow_p"></div></div>
+<div class="next4"><div id="arrow_n"></div></div>
+        <div class="images_inside4">
+        	<img src="img_6110.png">
+        	<img src="img_6012.png">
+            <img src="img_6013.png">
+            <img src="img_6014.png">
+            <img src="img_6108.png">
+            <img src="img_6109.png">  
+      
+        </div>
+</div>
+<!-- <img src="img_6013.png" width=49% id="image"><img src="img_6014.png" width=49% id="image">
+<img src="img_6012.png" width=49% id="image"><img src="img_6108.png" width=49% id="image">
+<img src="img_6109.png" width=49% id="image"><img src="img_6110.png" width=49% id="image">
+		<br/><br/> -->
+	<div id="back_4">Close<br>
+</div>
+</div>
+
+
+<div class="work_detail5">
+
+<!-- 		<div id="close_5"></div> -->
+		<div id="title_work_detail">Susan Kare Report</div>
+		<br><br>
+	<img src="susan_kare_magazine.jpg" width=100%>
+	
+	<div id="intro">
+		<em>Susan Kare is one of graphic designers that I really like. Her design have profond affected on modern user interface design. With only limited pixals, she can design so many clear and simple icons. I am really happy that I have a chance to do research on her and design a magazine layout based on her style. 
+		<br/><br/>
+		I choose use the pixelated style because it is her most famous art style. Although the reason behind her style is because of technoloical limitation in the past, I want to use this nostalgia style to heightlight the contribution she brought to the modern user typface design.</em>
+<br/><br/>
+		<strong>Full Text:</strong><br/>
+		One day in 1984, Susan got a phone call from her high school friends Andy Hertzfeld. Andy asked her if she would be interested in doing fonts and icons for his new invitation, which is the 1st version of Macintosh.  At that time, no one knew how profound this heavy machine would bring to the world, and also, the first version of the fonts and interface designed by this young college student. When Susan drew a pirate flag with rainbow Apple icon inside skull’s left eye and put this sentence Steve Job’s words “It’s better to be a pirate than join the navy.”, both the journey of Apple and her life as a Graphic Designer started.  
+		<br/><br/>
+At Apple Inc, since Kare had little experience of designing the digital realm, she would drew from her experience with mosaics, needlepoint, and pointillism. After procuring the smallest graph paper” Kare could find in an art supply store, she drew out a 32-by-32 grid. Drawing was such a powerful tool for Kare. Nowadays, even she chose to design with Photoshop and Illustrator, she will still do a lot of sketches with bound notebooks and gel pens.  
+	Kare was famous for her icons and interface. Every icon was started from a computer function. The time of producing a new icon was varied from two days to some weeks. The inspiration of her icons can be varied like art history or wacky gadgets or forgotten hieroglyphic. For instance, one of Apple’s “command”icon was was taken from the Saint Hannes cross, which was a symbol for a “place of interest.  And the design goal was to visualize jargon and make those hard words digestive for people to read. Instead of just restrict to English language, the distinction between each different was also avoid carefully when the icon was designed.  She does not strict about to design a very recognizable icon. For her, designing out some icon that will be easily remembered is counted as successful. “I would say an icon is successful if you could tell someone what it is once and they don’t forget it,” she said.
+		<br/><br/>
+She designed the original type fonts that shipped with the Macintosh and were named for cities: Chicago, New York and San Francisco.  Due to the constrain of 9 by 7 dots per letter, Kare tried to avoid uneven and pixelated looking computer typefaces by enlisting only horizontal, vertical, or 45-degree lines.2 One of the resulting typeface ‘Chicago ’, which is the font used on the Macintosh and iPod for more than two decades, indicate her attempt was achieved successfully.
+<br/><br/>
+
+Between 2006 and 2010, Susan Kare produced icons for gift section of Facebook . Users can spend 1$ to buy a digital gift and sent it to their friends. And all these gift icons were designed by Susan Kare. One of the icon “Big Kiss” was used as one of the default user image of Mac OS X. In 2015, Kare started to work for Pinterest as a product design leader until now. And the majority of his work content was working on products like buyable pins, guided search, and app pins. 
+	Her icons are simple, clear and user-friendly with some sense of playful and cuteness inside. Those icons designed by her in pixels always surprised me by their good combination of art and form. The information the icon tries to deliver was accurate in just serval pixel squares. For her, her icons are not only just a visualized tool for guidance but also a piece of art. Right now, many of Apple’s interface are altered based on Kare’s original design of the 1st Macintosh, which is the evidence of her icons’ successfulness.Her design of icons and fonts break the limit of pixel and show the users a clear and simple instruction about the function of each character was telling. Undoubtedly, her contribution to the interface of modern computer is huge and should never be forgotten. 
+
+
+	
+	</div>
+
+<img src="susank_magazine.jpg" width=49% style = "position: absolute;left: 25%;">
+	<div style="position: absolute; height: 100px; width: 100px; left: 25%; top: 310%;"></div>
+	<div id="back_5">Close<br>
+</div>
+</div>
+
+
+
+<div class="work_detail6">
+
+<!-- 		<div id="close_6"></div> -->
+		<div id="title_work_detail" style="font-size: 4.2rem;">Miss Alice’s Museum LOGO system</div>
+		<br><br>
+	<img src="mag_picture/logo_new2.png" width=100%>
+	
+	<div id="intro" style="padding-bottom: 2rem;">
+
+		A good logo system can help any type of organization stand. We can imagine a comapny is like a person and the brand system is like this person’s outlook based on their personality. As a designer, the research should be done before the design so that the personality of the target can be found. After the reseach, starting from the logo and tyoeface and color, it is really important to figure out how these will come together and also give a unique identity to the target organization.
+		<br/><br/>
+		For this assignment, we are free to design LOGO system for any type of museum/gallery. And I designed a brand for a children’s art gallery because I feel many brand identity of art museum for children is not well designed. And many of children's gallery or museum even don't have a distinguished logo or color scheme or good typeface choices, which makes me feel I should explore a little bit about that field. 
+<br/><br/>
+I used to name this as Alice Gallery but I got my teacher’s advice that this name is not childish. I took his advice and changed the name to Miss Alice’s Museum [MAG]. The name “Alice” is from a traditional fairy tale “Alices’s in Wonderland”. The first version logo for MAG is a cute cat, which its prototype is Cheshire Cat in the fairy tale. Originally, I wanted to extract color and elements from traced painting and recreate the logo. But I got the feedback that the painting was kind of losing details after tracing them in Adobe Illustration and there should be a distinguished color scheme for the brand. Besides, the rule for the logo alteration was not clear. And I agreed with all those points above and then I made some changes based on that.
+
+</div>
+<img src="mag_picture/logo_old_1.png" width=24%><img src="mag_picture/logo_old_2.png" width=24% >
+<img src="mag_picture/logo_old_3.png" width=24%><img src="mag_picture/logo_old_4.png" width=24% >
+	<div id="intro" style="padding-top: 0rem; padding-bottom: 2rem;">
+
+		<em style="font-size: 0.8rem;">This is the first version logo logo. The style is not that consistent. And there was no color to help the personality of company to stand out. </em>
+		<br/>
+		The I choose blue, bright yellow and reddish pink as the color theme of my museum, which is extracted from three primary color. I changed red color to a little bit pinkish because I found many kids like red and pink. And kids are tend to more like bright color because those color can catch their eyes more than dark color. Besides, with such a strong contrast of color the identity of MAG will be distinguished among all the galleries and museums. 
+<br/><br/>
+I used to name this as Alice Gallery but I got my teacher’s advice that this name is not childish. I took his advice and changed the name to Miss Alice’s Museum [MAG]. The name “Alice” is from a traditional fairy tale “Alices’s in Wonderland”. The first version logo for MAG is a cute cat, which its prototype is Cheshire Cat in the fairy tale. Originally, I wanted to extract color and elements from traced painting and recreate the logo. But I got the feedback that the painting was kind of losing details after tracing them in Adobe Illustration and there should be a distinguished color scheme for the brand. Besides, the rule for the logo alteration was not clear. And I agreed with all those points above and then I made some changes based on that.
+
+</div>	
+<img src="mag_picture/process_logo.png" width=70%>
+	<div id="intro" style="padding-top: 0.5rem;padding-bottom: 0.3rem;">
+	<em style="font-size: 0.8rem;">Basically I change the original logo, I think the logo with different shapes that inspired by MAG initals have more potential and more flexible to do changes. </em>
+	</div>
+
+			<div class="images6">
+<div class="prev6"><div id="arrow_p"></div></div>
+<div class="next6"><div id="arrow_n"></div></div>
+        <div class="images_inside6">
+            <img src="mag_picture/brand guidline_32.png">
+            <img src="mag_picture/brand guidline_33.png">
+            <img src="mag_picture/brand guidline_34.png">
+            <img src="mag_picture/brand guidline_35.png">
+            <img src="mag_picture/brand guidline_36.png">
+            <img src="mag_picture/brand guidline_37.png">
+            <img src="mag_picture/brand guidline_38.png">
+            <img src="mag_picture/brand guidline_39.png">
+      
+        </div>
+	</div>
+
+
+		<br/><br/>	
+	<div id="back_6">Close<br>
+</div>
+</div>
+
+
+
+
+<div class="work_detail7">
+
+	<!-- 	<div id="close_4"></div> -->
+		<div id="title_work_detail">Emoji and Sound Toy</div>
+		<br><br>
+	
+	<div id="intro">
+		When we are entering some text in the textboxs of any websites, do we really know what we are typing? I believe every letter have different personality. And their personalities will change in different conditions. And our human beings are controlling their personalities. 
+		<br/><br/>
+		Language is charming. I am always intrigued by letters and text. Different typefaces help to build letters’ personalities in that articales. And based on that, I decided to find different sounds for each letter and put them on the screen. At first, I wanted to do a website imitate the condition of New York Central Park. But that scheme is not interesting to play and audiences may not want to go back once again. After that, based on many people’s feedbcks, I decided to make the sound more fun to play. Then, I decided to replace the letter with emoji faces so that the entire website will become more fun to play. 
+		<br/><br/>
+		However, when I was working on this project, COVID-19 happened and my normal daily lives was plaused. Based on those stressful experiences and what I had seen from news, I felt it was something I should never forget. Thus, I did another one version which recorded the overwhelmed stressful feeling at that time.
+		<br/><br/>
+		<a href="http://teaching.synopticoffice.com/course/s20_pucd_2125g/projects/xuyou/exe2/index.html" target="_blank" style="color:#00AA90;font-weight: 900;">Go To The Website</a>
+	
+	</div>
+		<img src="emoji_sound.png" width=50%><img src="emoji_sound2.png" width=50%>
+		<br/><br/><br/><br/>
+	<img src="emoji_sound3.png" width=50%><img src="emoji_sound4.png" width=50%>
+	<br/><br/><br/><br/><br/>
+
+	<div id="back_7">Close<br>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
